@@ -139,7 +139,7 @@ func dumpMakeVars(ctx Context, config Config, goals, vars []string, write_soong_
 var BannerVars = []string{
 	"PLATFORM_VERSION_CODENAME",
 	"PLATFORM_VERSION",
-	"CHERISH_VERSION",
+	"LOTUS_VERSION",
 	"TARGET_PRODUCT",
 	"TARGET_BUILD_VARIANT",
 	"TARGET_BUILD_TYPE",
@@ -174,23 +174,11 @@ func Banner(make_vars map[string]string) string {
 	b := &bytes.Buffer{}
 
         fmt.Fprintln(b, "========================================================================")
-        fmt.Fprintln(b, "                                                                        ")
-        fmt.Fprintln(b, "                                                                        ")
-        fmt.Fprintln(b, "                                                                        ")
-	fmt.Fprintln(b, "  ██████╗ ██╗  ██╗███████╗██████╗ ██╗███████╗██╗  ██╗ ██████╗ ███████╗  ")
-        fmt.Fprintln(b, "  ██╔════ ██║  ██║██╔════╝██╔══██╗██║██╔════╝██║  ██║██╔═══██╗██╔════╝  ")
-        fmt.Fprintln(b, "  ██║     ███████║█████╗  ██████╔╝██║███████╗███████║██║   ██║███████╗  ")
-        fmt.Fprintln(b, "  ██║     ██╔══██║██╔══╝  ██╔══██╗██║╚════██║██╔══██║██║   ██║╚════██║  ")
-        fmt.Fprintln(b, "  ╚██████╗██║  ██║███████╗██║  ██║██║███████║██║  ██║╚██████╔╝███████║  ")
-        fmt.Fprintln(b, "   ╚═════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝  ")
-	fmt.Fprintln(b, "                                                                        ")
-        fmt.Fprintln(b, "                                                                        ")
+        fmt.Fprintln(b, "                         Be Ready To Get LotusOS                        ")
         fmt.Fprintln(b, "========================================================================")
-        fmt.Fprintln(b, "                       Be Ready To Get CherishOS                        ")
+        fmt.Fprintln(b, "                           LotusOS by dopaemon                          ")
         fmt.Fprintln(b, "========================================================================")
-        fmt.Fprintln(b, "                       CherishOS by hungphan2001                        ")
-        fmt.Fprintln(b, "========================================================================")
-	fmt.Fprintf(b, "%s=%s\n", "CHERISH_VERSION", make_vars["CHERISH_VERSION"])
+	fmt.Fprintf(b, "%s=%s\n", "LOTUS_VERSION", make_vars["LOTUS_VERSION"])
 	fmt.Fprintf(b, "%s=%s\n", "PLATFORM_VERSION", make_vars["PLATFORM_VERSION"])
 	fmt.Fprintf(b, "%s=%s\n", "TARGET_PRODUCT", make_vars["TARGET_PRODUCT"])
 	fmt.Fprintf(b, "%s=%s\n", "TARGET_BUILD_VARIANT", make_vars["TARGET_BUILD_VARIANT"])
